@@ -274,7 +274,7 @@
         <div class="ak-page-footer">
             <div class="ak-page-footer-contents">
                 <span>{% filter ak_text:"org_name" %}{% client_name %}{% endfilter %}</span>
-                <span><a href="{{ templateset.custom_fields.privacy|default:'//example.com/privacy' }}">{{ 'Privacy'|ak_text:'privacy' }}</a></span>
+                <span><a href="{{ templateset.custom_fields.privacy|default:'//example.com/privacy' }}">{{ 'Privacy policy'|ak_text:'privacy' }}</a></span>
                 <span><a href="{{ templateset.custom_fields.contact|default:'//example.com/privacy' }}">{{ 'Contact'|ak_text:'contact' }}</a></span>
             </div>
         </div>
