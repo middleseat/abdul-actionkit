@@ -32,11 +32,7 @@
     {% end %}
     <style>
 	{% include "style.css" %}
-    {% if templateset.custom_fields.font_family %}
-        html {
-            font-family: {{ templateset.custom_fields.font_family|safe }};
-        }
-    {% endif %}
+ 
     {% if templateset.custom_fields.font_size %}
         html {
             font-size: {{ templateset.custom_fields.font_size }};
