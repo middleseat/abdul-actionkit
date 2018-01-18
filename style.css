@@ -695,7 +695,7 @@ img.ak-featured-img {
 
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 15.5px;
+    font-size: 18px;
     font-weight: 200;
 }
 h1, h2, h3, h4, h5, h6, button {
@@ -811,8 +811,9 @@ h1 {}
 
 /* Used for page title */
 h2 {
-    font-size: 1.55em;
-    font-size: 1.55rem;
+    font-size: 3em;
+    font-size: 3rem;
+    text-transform:uppercase;
     font-weight: 600;
     color: #6e8d30;
     margin: 6px 0 2px;
