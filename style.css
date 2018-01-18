@@ -1414,18 +1414,17 @@ button,
 input[type="submit"],
 a.ak-button,
 .ak-button {
-    background: #007bc5;
+	width:100%;
+	border-radius:0;
+	box-sizing:border-box;
+	padding:10px;
+	height:auto;
+	font-size:2em;
+	text-transform:uppercase;
     color: #fff;
-    height: 38px;
-    font-size: 1.35em;
-    font-size: 1.35rem;
-    font-weight: 200;
+    font-weight: 400;
     margin: 10px auto;
     border: none;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    padding: 0 20px;
     cursor: pointer;
     text-align: center;
 }
@@ -1433,7 +1432,7 @@ button:hover,
 input[type="submit"]:hover,
 a.ak-button:hover,
 .ak-button:hover {
-    background-color: #31a8f0;
+    background-color: #a31f20;
 }
 button,
 input[type="submit"] {
