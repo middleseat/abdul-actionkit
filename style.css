@@ -1206,7 +1206,7 @@ div.radio-item {
 .js .ak-labels-overlaid label.ak-is-overlaid {
     position: absolute;
     z-index: 1;
-    padding: 12px 12px;
+    padding: 14px;
     line-height: 1.4;
 	
 }
