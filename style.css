@@ -484,7 +484,9 @@ body {
     line-height: 1;
     text-align: center;
     margin-bottom:40px;
-    display:block;   
+    display:block; 
+	box-sizing:border-box;
+	padding:20px;
 }
 
 div.ak-page-container {
@@ -692,7 +694,7 @@ img.ak-featured-img {
    ========================================================================== */
 
 html {
-    font-family: "Open Sans", sans-serif;
+    font-family: "tk-ff-tisa-web-pro", sans-serif;
     font-size: 15.5px;
     font-weight: 200;
 }
