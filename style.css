@@ -998,11 +998,7 @@ div.radio-item {
 }
 
 .ak-styled-fields label {
-    font-weight: 600;
-}
-
-.ak-styled-fields label p {
-	margin-bottom: 6px;
+    margin-bottom: 6px;
     margin-top: 0;
 	font-size:24px;
 	font-family: "din-condensed",sans-serif;
@@ -1013,6 +1009,10 @@ div.radio-item {
     background: #F2F2F2;
     border: 2px solid #0D2B4C;
     padding: 13px 0;
+}
+
+.ak-styled-fields label p {
+    margin-top: 0;
 }
 
 .ak-radio-set .ak-radio-choice,
