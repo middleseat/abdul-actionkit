@@ -478,19 +478,13 @@ body {
     width: 100%;
 }
 .ak-page-header {
-    background: #668d24;
+    background: #FFF;
     color: #fff;
     padding: 0;
-    height: 60px;
     line-height: 1;
-}
-.ak-page-header h1 {
-    font-size: 32px;
-    margin-left: 0;
-    height: 60px;
-    vertical-align: center;
-    padding-top: 12px;
-    margin-top: 0;
+    text-align: center;
+    margin-bottom:40px;
+    display:block;   
 }
 
 div.ak-page-container {
