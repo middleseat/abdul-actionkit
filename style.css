@@ -694,15 +694,16 @@ img.ak-featured-img {
    ========================================================================== */
 
 html {
-    font-family: "ff-tisa-web-pro", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
     font-size: 15.5px;
     font-weight: 200;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "din-condensed", sans-serif;
-	font-size:180%;
 }
-
+p {
+	font-family: "ff-tisa-web-pro", sans-serif;
+}
 /*
     With HTML base font of 15.5px
     font-size: 0.58rem  =   9px
