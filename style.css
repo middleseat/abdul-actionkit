@@ -956,17 +956,15 @@ body.js li.if-js { display: list-item; }
     /* font-size: 1.0rem; */
     margin-bottom: 6px;
     margin-top: 0;
-    width: 100%;
-	font-size:24px;
+	font-size:18px;
 	font-family: "din-condensed",sans-serif;
     font-weight: 300;
     color: #939393;
     box-sizing: border-box;
-    line-height: 24px;
+    line-height: 18px;
     background: #F2F2F2;
     border: 2px solid #0D2B4C;
-    padding: 16px;	
-	
+    padding: 18px;	
 }
 
 .ak-styled-fields select {
