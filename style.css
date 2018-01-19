@@ -499,6 +499,7 @@ div.ak-page-container {
 	height:200px;
 	margin-top:25px;
 	z-index:-5;position:relative;
+	overflow: hidden;
 }
 .ak-page-divider-angle {
 	width:150%;
