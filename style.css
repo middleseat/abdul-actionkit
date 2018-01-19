@@ -500,6 +500,12 @@ div.ak-page-container {
 	height:200px;
 	margin-top:40px;
 }
+.ak-page-divider-angle {
+	width:100%;
+	background-color:#EBEBEB;
+	height:100px;
+	transform: rotate(45deg);
+}
 .ak-page-footer {
     text-align: right;
     border-top: 1px solid #efefef;
