@@ -116,7 +116,7 @@
         	
         	{% else %}
         	{% if not all %}
-				<div class="ak-field-box {% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
+				<div class="{% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
 					<div class="ak-info-column">
 					{% if campaign.use_title and campaign.show_title and event.title %}
 						<p class="ak-event-title"><a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}">{{ event.title }}</a></p>
