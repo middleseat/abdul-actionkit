@@ -18,19 +18,18 @@
 					   {% endif %}</p>
 					{% endif %}
 
-    {% if event.note_to_attendees %}
-        <tr class="ak-event-note-to-attendees">
-            <th>Your host says:</th>
-            <td>{{ event.note_to_attendees }}</td>
-        </tr>
-    {% endif %}
-    </table>
-
-    {% if event.public_description %}
-        <p class="ak-event-description">
-            {{ event.public_description }}
-        </p>
-    {% endif %}
+   <div class="ak-description-column">
+					{% if campaign.show_public_description %}
+						{% if event.public_description %}
+							<p class="ak-event-description"><span><strong>Description:</strong></span> <br>
+								{{ event.public_description }}
+							</p>
+						{% endif %}
+					{% endif %}
+					</div>
+					{% if campaign.show_attendee_count %}<div class="attendeecount">
+						<p><strong>Signups:</strong> {{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }} so far.</p>
+					</div>{% endif %}
 
 </div>
 
