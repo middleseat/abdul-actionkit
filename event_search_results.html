@@ -116,32 +116,43 @@
         	
         	{% else %}
         	{% if not all %}
-				<div class="{% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
+				<div class="ak-field-box {% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
 					<div class="ak-info-column">
-						<p>{{ event.starts_at }} in {{ event.city }}, {{ event.state }}</p>
-						<p>{{ event.venue }<br>{{ event.city_etc }} {{ event.city_etc_no_postal }}</p>
-						{% if campaign.show_venue and event.venue %}
+					{% if campaign.use_title and campaign.show_title and event.title %}
+						<p class="ak-event-title"><a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}">{{ event.title }}</a></p>
+					{% else %}
+						<p class="ak-event-title">
+							<a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}" class="ak-campaign-title">{{ campaign.local_title }}</a>
+						</p>
+					{% endif %}
+			
+					{% if campaign.show_venue and event.venue %}
 						<span class="ak-event-venue">{{ event.venue }}</span>
 					{% endif %}
-					{% endif %}
-
+			
 					{% if campaign.show_address1 %}
-						<div class="ak-event-address1">{{ event.address1 }}<br>{% if campaign.show_city or campaign.show_state or campaign.show_zip %}
-						{% if campaign.show_zip %}
-							{{ event.city_etc }}
-						{% else %}
-							{{ event.city_etc_no_postal }}
-						{% endif %}</div>
+						<div class="ak-event-address1">{{ event.address1 }}</div>
 					{% endif %}
 
-					
+					{% if campaign.show_city or campaign.show_state or campaign.show_zip %}
+						{% if campaign.show_zip %}
+							<div class="ak-event-city-etc">{{ event.city_etc }}</div>
+						{% else %}
+							<div class="ak-event-city-etc">{{ event.city_etc_no_postal }}</div>
+						{% endif %}
+					{% endif %}
 
 					{% if event.distance|is_nonblank %}
 						<p><span class="ak-event-distance">{{ event.distance_str }} away</a></span></p>
 					   {% endif %}
 		
 					<table cellspacing="0" class="ak-event-table">
-		
+						{% if event.starts_at %}
+							<tr class="ak-event-time">
+								<th>When:</th>
+								<td>{{ event.starts_at }}</td>
+							</tr>
+						{% endif %}
 						{% if campaign.show_directions and event.directions %}
 							<tr class="ak-event-directions">
 								<th>Directions:</th> 
