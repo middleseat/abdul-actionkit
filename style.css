@@ -753,6 +753,9 @@ p {
     margin: 10px 0;
     line-height: 1.5;
 }
+.ak-abovefold p:first-of-type {
+	margin-top:0;
+}
 
 .ak-normal {
     font-weight: 400;
@@ -849,7 +852,7 @@ h2 {
 }
 @media screen and (min-width: 600px) {
     h2 {
-        margin: 0 0 30px;
+        margin: 0 0 35px;
     }
     .event-search #ak-map-img {
 		width: 48%;
