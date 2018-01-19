@@ -132,8 +132,7 @@
 								{{ event.directions }}</p>
 					{% endif %}
 					</div>
-					<hr>
-					<div class="ak-description-column">
+					<div class="ak-description-column" style="margin: 10px 0;">
 					{% if campaign.show_public_description %}
 						{% if event.public_description %}
 							<p class="ak-event-description">
@@ -142,8 +141,8 @@
 						{% endif %}
 					{% endif %}
 					</div>
-					{% if campaign.show_attendee_count %}<br><hr><div class="attendeecount">
-						<p><strong>Signups:</strong> {{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }} so far. {% if event.max_attendees %}Maximum of {{ event.max_attendees }}{% endif %}</p>
+					{% if campaign.show_attendee_count %}<div class="attendeecount">
+						<p><strong>Signups:</strong> {{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }} so far.</p>
 					</div>{% endif %}
 				</div>
 			{% endif %}
