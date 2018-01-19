@@ -2,12 +2,6 @@
 
 {% filter collapse_spaces %}
 
-<div class="ak-field-box">
-
-    {% if campaign.use_title and campaign.show_title and event.title %}
-        <p class="ak-event-title"><a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;zip={{args.zip}}">{{ event.title }}</a></p>
-    {% endif %}
-
     {% if event.venue %}
         <span class="ak-event-venue">{{ event.venue }}</span>
     {% endif %}
@@ -49,6 +43,5 @@
         </p>
     {% endif %}
 
-</div>
 
 {% endfilter %}
