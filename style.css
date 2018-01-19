@@ -956,15 +956,15 @@ body.js li.if-js { display: list-item; }
     /* font-size: 1.0rem; */
     margin-bottom: 6px;
     margin-top: 0;
-	font-size:20px;
+	font-size:22px;
 	font-family: "din-condensed",sans-serif;
     font-weight: 300;
     color: #939393;
     box-sizing: border-box;
-    line-height: 20px;
+    line-height: 22px;
     background: #F2F2F2;
     border: 2px solid #0D2B4C;
-    padding: 20px;	
+    padding: 22px;	
 	width:100%;
 }
 
