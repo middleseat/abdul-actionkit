@@ -521,7 +521,9 @@ div.ak-page-container {
     box-sizing: border-box;
 	font-family: "din-condensed", sans-serif;
 }
-
+.ak-page-footer p {
+	font-family: "din-condensed", sans-serif;
+}
 .ak-page-footer-contents {
     margin-top: 20px;
 	text-align: center;
