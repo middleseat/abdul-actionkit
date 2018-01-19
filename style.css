@@ -2864,9 +2864,7 @@ label.ak-donate-step:hover div.ak-step-number {
    ========================================================================== */
 
 .ak-pagetype-event_create .ak-page-content { margin-bottom:35px; }
-#event-create-form input, select {
-	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
-}
+
 #event-create-form label {
 color:#000;
 font-size:24px
