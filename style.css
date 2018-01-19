@@ -1551,6 +1551,8 @@ a.ak-share-button {
     padding: 16px;
     padding-left: 60px;
     text-align: left;
+	font-family: "din-condensed", sans-serif;
+	line-height:28px;
 }
 .ak-share-button.ak-facebook {
     background-color: #3B5998;
