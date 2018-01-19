@@ -1628,7 +1628,20 @@ padding: 20px 15px;background-color:#FFF;
 .ak-field-box.ak-event-disabled {
 	background: rgba(119, 119, 119, 0.07);
 }
+.ak-socialshare .ak-share-button.ak-facebook {
+height:50px;border-radius:0;font-size:25px; line-height:50px;
+ }
 
+.ak-socialshare .ak-share-button.ak-twitter {
+height:50px;border-radius:0;font-size:25px; line-height:50px;
+ }
+
+a.ak-small-share-button.ak-share-button.ak-facebook {
+background-position-y:50%;
+}
+a.ak-small-share-button.ak-share-button.ak-twitter {
+background-position-y:50%;
+}
 .ak-event-completed, .ak-event-full {
 	color: #dd0000;
 }
