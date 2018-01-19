@@ -2861,6 +2861,11 @@ label.ak-donate-step:hover div.ak-step-number {
 /* Events Pages
    ========================================================================== */
 
+#event-create-form label {
+color:#000;
+font-size:24px
+}
+
 button.ak-event-search {
     display: inline;
     position: relative;
