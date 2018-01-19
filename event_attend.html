@@ -83,33 +83,6 @@ $(window).on('load', function (){
                     </div>
                 {% endif %}
                 {% if not update %}
-                <p>
-                    There
-                    {% if event.is_open_for_signup and open_events|length|subtract:1 > 0 %}
-                        {% if open_events|length|subtract:2 > 0 %}
-                            are
-                        {% else %}
-                            is
-                        {% endif %}
-                        <strong>
-                            {{ open_events|length|subtract:1 }}
-                            other event{{ open_events|length|subtract:1|pluralize }}
-                        </strong>
-                    {% else %}
-                        {% if open_events|length|subtract:1 > 0 %}
-                            are
-                        {% else %}
-                            is
-                        {% endif %}
-                        <strong>
-                            {{ open_events|length }}
-                            event{{ open_events|length|pluralize }}
-                        </strong>
-                    {% endif %}
-                    open for signup{% if is_in_past or is_full %}({% if is_full %}
-                    plus <strong>{{ is_full|length }}</strong> full{% endif %}{% if is_in_past and is_full %}, {% endif %}
-                    {% if is_in_past and not is_full %} plus {% endif %}
-                    {% if is_in_past %}<strong>{{ is_in_past|length }}</strong> ended{% endif %}){% endif %}.
                     {% if event.is_open_for_signup %}
                         {% if open_events|length|subtract:1 > 0 %}
                             <a href="/event/{{ campaign.local_name }}/?akid={{args.akid}}&amp;zip={{args.zip}}">Search for another event</a>.
