@@ -1616,13 +1616,13 @@ a.ak-small-share-button.ak-share-button.ak-twitter {
    ========================================================================== */
 
 .ak-field-box {
-    background: #f3f6f7;
-    border: 1px solid #bdd5da;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    padding: 10px 12px;
+
     margin-bottom: 10px;
+	
+ border:0; border-radius:0;
+border-left: 6px solid #4A90E2;
+box-sizing:border-box;
+padding:15px;background-color:#FFF;
 }
 
 .ak-field-box.ak-event-disabled {
