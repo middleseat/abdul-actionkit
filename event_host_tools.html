@@ -183,12 +183,6 @@
                         {% endif %}
                         {% if attendees %}
                         <li class="if-js"><a class="jump-link" id="email-attendees-link" href="#contact-attendees">Email attendee{{ attendees|length|pluralize }}</a></li>
-                        {% else %}
-                        <!-- Flag that the functionality will be there -->
-                        <li class="if-js">
-                            Email attendees<br>
-                            (Available after people sign up for your event.)
-                        </li>
                         {% endif %}
                         {% if event.is_in_past %}
                         <li class="if-js"><a class="jump-link" id="add-attendees-link" href="#attendees-add">Add Attendees</a></li>
