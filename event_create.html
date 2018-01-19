@@ -46,7 +46,7 @@
                     {% if campaign.use_title %}
                         <div>
                             <label for="id_event_title">Event name<span class="ak-required-flag">*</span></label>
-                            <input id="id_event_title" type="text" name="event_title" value="{{ campaign.default_title }}">
+                            <input id="id_event_title" type="text" name="event_title" value="{% if campaign.id == 1 %}Livestream Organizing Meeting for Abdul{% endif %}">
                         </div>
                     {% endif %}
 
