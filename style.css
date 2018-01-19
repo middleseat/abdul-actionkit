@@ -849,7 +849,7 @@ h2 {
 }
 @media screen and (min-width: 600px) {
     h2 {
-        margin: 0 0 14px;
+        margin: 0 0 30px;
     }
     .event-search #ak-map-img {
 		width: 48%;
