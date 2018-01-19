@@ -501,11 +501,14 @@ div.ak-page-container {
     margin-top: 10px;
     width: 100%;
     clear: both;
+	    background-color: #EBEBEB;
+    padding: 0 2%;
+    box-sizing: border-box;
 }
 
 .ak-page-footer-contents {
-    font-size: 12px;
     margin-top: 20px;
+	text-align: center;
 }
 
 .ak-page-footer-contents a {
