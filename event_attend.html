@@ -113,7 +113,6 @@ $(window).on('load', function (){
                 <!--<img src="http://maps.google.com/maps/api/staticmap?sensor=false&size=500x300&markers={{ event.address1|urlencode }}, {{ event.city_etc|urlencode }}">-->
                 <div id="ak-map"></div>
                 
-                <p class="caption">Sign up to get driving directions and more.</p>
 
                 {% endif %}
 
@@ -156,7 +155,7 @@ $(window).on('load', function (){
                         <input type="hidden" name="event_signup_ground_rules" value="1">
                     {% endif %}
                     <div>
-                    <button type="submit" class="ak-submit-button">{% if update %}Update signup{% else %}Sign up for event{% endif %}</button>
+                    <button type="submit" class="ak-submit-button">{% if update %}Update signup{% else %}{% if page.custom_fields.submit_button_name %}{{ page.custom_fields.submit_button_name }}{% else %}Sign up for event{% endif %}{% endif %}</button>
                     </div>
                 </div>           
             </div>
