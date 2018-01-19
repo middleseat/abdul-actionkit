@@ -1642,6 +1642,9 @@ background-position-y:50%;
 a.ak-small-share-button.ak-share-button.ak-twitter {
 background-position-y:50%;
 }
+.ak-btn-short, input[type="submit"].ak-btn-short {
+	border-radius: 0;
+}
 .ak-event-completed, .ak-event-full {
 	color: #dd0000;
 }
