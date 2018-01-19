@@ -131,14 +131,6 @@
 								<span><strong>Directions:</strong></span> <br>
 								{{ event.directions }}</p>
 					{% endif %}
-
-
-						{% if campaign.show_attendee_count %}
-							<tr class="ak-event-attendee-count">
-								<th>Attendee count:</th>
-								<td>{{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }}</td>
-							</tr>
-						{% endif %}
 					</div>
 					<hr>
 					<div class="ak-description-column">
@@ -150,6 +142,9 @@
 						{% endif %}
 					{% endif %}
 					</div>
+					{% if campaign.show_attendee_count %}<div class="attendeecount">
+						{{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }}
+					</div>{% endif %}
 				</div>
 			{% endif %}
             {% endif %}
