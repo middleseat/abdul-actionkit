@@ -1622,7 +1622,7 @@ a.ak-small-share-button.ak-share-button.ak-twitter {
  border:0; border-radius:0;
 border-left: 6px solid #4A90E2;
 box-sizing:border-box;
-padding:15px;background-color:#FFF;
+padding: 20px 15px;background-color:#FFF;
 }
 
 .ak-field-box.ak-event-disabled {
