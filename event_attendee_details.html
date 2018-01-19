@@ -3,7 +3,11 @@
 {% filter collapse_spaces %}
 
 <div>
-	<p style="font-weight:bold;color:#e83d3e">{{ event.starts_at }}</p>
+	<p style="font-weight:bold;color:#e83d3e">{{ event.get_starts_at_display }} {% if event.is_in_past %}
+                    <span class="ak-error ak-event-over-notice">
+                        (event is now over)
+                    </span>
+                {% endif %}</p>
 						<p><span style="font-weight:bold;">{{ event.venue }}</span><br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
 
     {% if event.venue %}
