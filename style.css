@@ -1492,7 +1492,7 @@ a.ak-button.ak-full-width {
 }
 
 button.ak-normal {
-    width: 280px;
+    width: 100%;
 }
 
 .ak-submit-button {
@@ -1509,8 +1509,9 @@ button.ak-normal {
 @media screen and (min-width: 480px) {
    button.ak-submit-button,
    a.ak-submit-button {
-       max-width: 280px;
-   }
+width:100%;
+	   font-size:22px;
+	}
 }
 
 .ak-btn-short,
