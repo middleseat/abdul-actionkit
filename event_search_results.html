@@ -120,8 +120,18 @@
 					<div class="ak-info-column">
 						<p>{{ event.starts_at }} in {{ event.city }}, {{ event.state }}
 					{% endif %}</p>
-						<p>{{ event.venue }{% if campaign.show_address1 %}<br>{{ event.city_etc }} {{ event.city_etc_no_postal }}{% endif %}</p>
-					
+					{% if campaign.show_venue and event.venue %}
+						<span class="ak-event-venue">{{ event.venue }}</span>
+					{% endif %}
+			
+					{% if campaign.show_address1 %}
+						<div class="ak-event-address1">{{ event.address1 }}<br>{% if campaign.show_city or campaign.show_state or campaign.show_zip %}
+						{% if campaign.show_zip %}
+							{{ event.city_etc }}
+						{% else %}
+							{{ event.city_etc_no_postal }}
+						{% endif %}</div>
+					{% endif %}
 
 					
 
