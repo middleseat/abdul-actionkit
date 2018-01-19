@@ -2866,7 +2866,7 @@ color:#000;
 font-size:24px
 }
 #event-create-form select {
-	display: block;
+	display: inline-block;
     height: 50px;
 }
 
