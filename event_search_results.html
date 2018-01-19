@@ -143,7 +143,7 @@
 					{% endif %}
 					</div>
 					{% if campaign.show_attendee_count %}<br><hr><div class="attendeecount">
-						<p>{{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }}</p>
+						<p><strong>Signups:</strong> {{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }} so far. {% if event.max_attendees %}Maximum of {{ event.max_attendees }}{% endif %}</p>
 					</div>{% endif %}
 				</div>
 			{% endif %}
