@@ -2865,6 +2865,8 @@ label.ak-donate-step:hover div.ak-step-number {
 
 .ak-pagetype-event_create .ak-page-content { margin-bottom:35px; }
 
+.directions-form button { font-size:20px; }
+
 #event-create-form label {
 color:#000;
 font-size:24px
