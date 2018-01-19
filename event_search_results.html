@@ -119,7 +119,7 @@
 				<div class="{% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
 					<div class="ak-info-column">
 						<p style="font-weight:bold;color:#e83d3e">{{ event.starts_at }}</p>
-						<p><span style="font-weight:bold;">{{ event.venue }}</span(<h5><a href="https://www.google.com/maps/place/{{ event.address1|urlencode }},%20{{ event.city_etc|urlencode }}" target="_blank" class="ak-larger-text"><small><img src="/media/modern/blue_marker.png" class="ak-marker"/> Map it!</a></small></h5>)<br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
+						<p><span style="font-weight:bold;">{{ event.venue }}</span>(<h5><a href="https://www.google.com/maps/place/{{ event.address1|urlencode }},%20{{ event.city_etc|urlencode }}" target="_blank" class="ak-larger-text"><small><img src="/media/modern/blue_marker.png" class="ak-marker"/> Map it!</a></small></h5>)<br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
 					{% if campaign.use_title and campaign.show_title and event.title %}
 						<p class="ak-event-title"><a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}">{{ event.title }}</a></p>
 					{% else %}
