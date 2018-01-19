@@ -120,54 +120,25 @@
 					<div class="ak-info-column">
 						<p style="font-weight:bold;color:#e83d3e">{{ event.starts_at }}</p>
 						<p><span style="font-weight:bold;">{{ event.venue }}</span>&nbsp;<a href="https://www.google.com/maps/place/{{ event.address1|urlencode }},%20{{ event.city_etc|urlencode }}" target="_blank" class="ak-larger-text"><small><img src="/media/modern/blue_marker.png" class="ak-marker"/> Map it!</a></small><br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
-					{% if campaign.use_title and campaign.show_title and event.title %}
-						<p class="ak-event-title"><a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}">{{ event.title }}</a></p>
-					{% else %}
-						<p class="ak-event-title">
-							<a href="/event/{{ campaign.local_name }}/{{event.id}}/signup/?akid={{args.akid}}&amp;source={{args.source}}" class="ak-campaign-title">{{ campaign.local_title }}</a>
-						</p>
-					{% endif %}
-			
-					{% if campaign.show_venue and event.venue %}
-						<span class="ak-event-venue">{{ event.venue }}</span>
-					{% endif %}
-			
-					{% if campaign.show_address1 %}
-						<div class="ak-event-address1">{{ event.address1 }}</div>
-					{% endif %}
-
-					{% if campaign.show_city or campaign.show_state or campaign.show_zip %}
-						{% if campaign.show_zip %}
-							<div class="ak-event-city-etc">{{ event.city_etc }}</div>
-						{% else %}
-							<div class="ak-event-city-etc">{{ event.city_etc_no_postal }}</div>
-						{% endif %}
-					{% endif %}
+					
 
 					{% if event.distance|is_nonblank %}
 						<p><span class="ak-event-distance">{{ event.distance_str }} away</a></span></p>
 					   {% endif %}
 		
-					<table cellspacing="0" class="ak-event-table">
-						{% if event.starts_at %}
-							<tr class="ak-event-time">
-								<th>When:</th>
-								<td>{{ event.starts_at }}</td>
-							</tr>
-						{% endif %}
-						{% if campaign.show_directions and event.directions %}
-							<tr class="ak-event-directions">
-								<th>Directions:</th> 
-								<td>{{ event.directions }}</span></td>
-							</tr>
-						{% endif %}
+					{% if campaign.show_directions and event.directions %}
+							<p class="ak-event-directions">
+								<span><strong>Directions:</strong></span> <br>
+								{{ event.directions }}</p>
+					{% endif %}
+
+
 						{% if campaign.show_attendee_count %}
 							<tr class="ak-event-attendee-count">
 								<th>Attendee count:</th>
 								<td>{{ event.attendee_count }} attendee{{ event.attendee_count|pluralize }}</td>
 							</tr>
 						{% endif %}
-					</table>
 					</div>
 					<div class="ak-description-column">
 					{% if campaign.show_public_description %}
