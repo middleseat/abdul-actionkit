@@ -10,13 +10,9 @@
     <div class="ak-grid-col ak-grid-col-12-of-12">
 
         {% if campaign.use_title %}
-            <h2>Event: {{ event.title }}</h2>
+            <h2>{{ event.title }}</h2>
         {% else %}
             <h2>Event: {{ campaign.local_title }}</h2>
-        {% endif %}
-
-        {% if campaign.use_title %}
-            <h3>{{ campaign.local_title }}</h3>
         {% endif %}
 
         <!-- Message from mothership -->
