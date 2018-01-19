@@ -1,4 +1,4 @@
-{% extends "./wrapper.html" %}{% load actionkit_tags %}
+b{% extends "./wrapper.html" %}{% load actionkit_tags %}
 
 {% block content %}
 
@@ -30,7 +30,7 @@
 
             {% include "./user_form_wrapper.html" %}
 
-            <button type="submit" class="full">Sign Up</button>
+            <button type="submit" class="full">{% if page.custom_fields.submit_button_name %}{{ page.custom_fields.submit_button_name }}{% else %}Sign Up{% endif %}</button>
 
         </div>
     </div>
