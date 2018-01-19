@@ -118,8 +118,10 @@
         	{% if not all %}
 				<div class="{% if event.is_in_past or event.is_full %}ak-event-disabled{% endif %}">
 					<div class="ak-info-column">
+					{% endif %}
 						<p>{{ event.starts_at }} in {{ event.city }}, {{ event.state }}</p>
-					{% if campaign.show_venue and event.venue %}
+						<p>{{ event.venue }<br>{{ event.city_etc }} {{ event.city_etc_no_postal }}</p>
+						{% if campaign.show_venue and event.venue %}
 						<span class="ak-event-venue">{{ event.venue }}</span>
 					{% endif %}
 			
