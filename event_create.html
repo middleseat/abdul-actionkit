@@ -154,11 +154,8 @@
                 <div class="ak-errs-below">
                     <label for="id_event_public_description">
                         Public description<span class="ak-required-flag">*</span>
-                        <br><span class="ak-normal">
-                            Describe this event and provide any relevant details for other volunteers considering attending.
-                        </span>
                     </label>
-                    <textarea id="id_event_public_description" name="event_public_description"></textarea>
+                    <textarea id="id_event_public_description" name="event_public_description">{% if campaign.id == 1 %}Abdul is running a campaign for the people of Michigan and on Feb 18th, and we’re organizing Livestream Organizing Meetings across the state. We need your help hosting events from Detroit to Marquette. Sign up on this page if you’re ready to host a meeting!{% endif %}</textarea>
                 </div>
 
                 <div>

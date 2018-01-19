@@ -2869,9 +2869,7 @@ font-size:24px
 	display: inline-block;
     height: 50px;
 }
-.ak-labels-before label span {
-	font-size:14px;
-}
+
 button.ak-event-search {
     display: inline;
     position: relative;
