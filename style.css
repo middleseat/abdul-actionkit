@@ -1473,6 +1473,7 @@ a.ak-button:hover,
 button,
 input[type="submit"] {
     display: block;
+	font-family: "din-condensed", sans-serif;
 }
 a.ak-button,
 .ak-button {
@@ -1525,6 +1526,7 @@ input[type="submit"].ak-btn-short {
     border: none;
     width: auto;
     display: inline-block;
+	font-family: "din-condensed", sans-serif;
 }
 
 .ak-btn-search,
@@ -1532,6 +1534,7 @@ input[type="submit"].ak-btn-search {
     display: inline-block;
     position: relative;
     top: 2px;
+	font-family: "din-condensed", sans-serif;
 }
 
 /* Used when previewing a page from within the admin */
@@ -3040,6 +3043,7 @@ input[type="submit"] {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+	font-family: "din-condensed", sans-serif;
 }
 
 /* label positioning on create event page */
