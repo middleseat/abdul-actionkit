@@ -120,7 +120,7 @@
                             <label for="id_event_venue">Venue<span class="ak-required-flag">*</span></label>
                             <input id="id_event_venue" type="text" if-at-my-house="Home" name="event_venue">
                         </div>
-                        <div>
+                        <div style="display:none;">
                             <label for="event_country">Country</label>
                             {% include "./country_select.html" %}
                         </div>
@@ -144,16 +144,7 @@
                             <label for="id_event_zip">ZIP</label>
                             <input id="id_event_zip" type="text" name="event_zip">
                         </div>
-                        <!-- <div><label for="id_event_phone">Contact phone:</label> <input id="id_event_phone" type="tel" name="event_phone" size="12"></div> -->
-                        {% if campaign.show_address1 %}
-                            <div class="strong">
-                                NOTE: Event addresses are public.
-                            </div>
-                        {% endif %}
                     {% endwith %}
-                    <p>
-                        Double-check date, time, and location before you submit!
-                    </p>
                 </div>
 
             </div>
@@ -164,12 +155,7 @@
                     <label for="id_event_public_description">
                         Public description<span class="ak-required-flag">*</span>
                         <br><span class="ak-normal">
-                            {% if campaign.allow_private %}
-                                For public events, people
-                            {% else %}
-                                People
-                            {% endif %}
-                            will see this text before signing up
+                            Describe this event and provide any relevant details for other volunteers considering attending.
                         </span>
                     </label>
                     <textarea id="id_event_public_description" name="event_public_description"></textarea>
@@ -181,7 +167,7 @@
                     <textarea id="id_event_directions" name="event_directions"></textarea>
                 </div>
 
-                <div>
+                <div style="display:none;">
                     <label for="id_event_note_to_attenddees">Note to attendees
                     </label>
                     <textarea id="id_event_note_to_attenddees" name="event_note_to_attendees"></textarea>

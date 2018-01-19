@@ -2865,6 +2865,10 @@ label.ak-donate-step:hover div.ak-step-number {
 color:#000;
 font-size:24px
 }
+#event-create-form select {
+	display: block;
+    height: 50px;
+}
 
 button.ak-event-search {
     display: inline;
