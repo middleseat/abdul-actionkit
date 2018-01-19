@@ -2,7 +2,9 @@
 
 {% filter collapse_spaces %}
 
-<div class="ak-field-box">
+<div>
+	<p style="font-weight:bold;color:#e83d3e">{{ event.starts_at }}</p>
+						<p><span style="font-weight:bold;">{{ event.venue }}</span>&nbsp;<a href="https://www.google.com/maps/place/{{ event.address1|urlencode }},%20{{ event.city_etc|urlencode }}" target="_blank" class="ak-larger-text"><small><img src="/media/modern/blue_marker.png" class="ak-marker"/> Google Maps</a></small><br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
 
     {% if event.venue %}
         <span class="ak-event-venue">{{ event.venue }}</span>
