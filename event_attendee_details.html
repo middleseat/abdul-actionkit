@@ -10,33 +10,14 @@
                 {% endif %}</p>
 						<p><span style="font-weight:bold;">{{ event.venue }}</span><br>{{ event.address1 }}, {{ event.city }}, {{ event.state }} {{ event.zip }}</p>
 
-    {% if event.venue %}
-        <span class="ak-event-venue">{{ event.venue }}</span>
-    {% endif %}
+	{% if campaign.show_directions and event.directions %}
+							<p class="ak-event-directions">
+								<span><strong>Directions:</strong></span> <br>
+								{{ event.directions }} {% if event.distance|is_nonblank %}
+				<span class="ak-event-distance">({{ event.distance_str }} away)</span>
+					   {% endif %}</p>
+					{% endif %}
 
-    <div class="ak-event-address1">{{ event.address1 }}</div>
-    <div class="ak-event-city-etc">{{ event.city_etc }}</div>
-
-    <table class="ak-event-table">
-    {% if event.get_starts_at_display %}
-        <tr class="ak-event-time">
-            <th>When:</th>
-            <td>
-                {{ event.get_starts_at_display }}
-                {% if event.is_in_past %}
-                    <span class="ak-error ak-event-over-notice">
-                        (event is now over)
-                    </span>
-                {% endif %}
-            </td>
-        </tr>
-    {% endif %}
-    {% if event.directions %}
-        <tr class="ak-event-directions">
-            <th>Directions to event:</th>
-            <td>{{ event.directions }}</td>
-        </tr>
-    {% endif %}
     {% if event.note_to_attendees %}
         <tr class="ak-event-note-to-attendees">
             <th>Your host says:</th>
