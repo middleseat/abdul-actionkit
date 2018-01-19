@@ -498,6 +498,7 @@ div.ak-page-container {
 	background-color:#0D2B4C;
 	width:100%;
 	height:200px;
+	margin-top:40px;
 }
 .ak-page-footer {
     text-align: right;
@@ -831,7 +832,7 @@ h2 {
 }
 @media screen and (min-width: 600px) {
     h2 {
-        margin: 24px 0 10px;
+        margin: 0 0 14px;
     }
     .event-search #ak-map-img {
 		width: 48%;
