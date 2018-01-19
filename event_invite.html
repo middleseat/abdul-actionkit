@@ -12,7 +12,16 @@
 
         <div class="ak-styled-fields {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}} ak-field-box">
         
-            <h3>The most important thing you can do right now is recruit friends to join you!</h3>
+            <h3>Now take the next step. Invite your friends:</h3>
+			
+			 <div class="ak-margin-top-1 ak-clearfix">
+        <div style="float: left; width: 49%;">
+            <a class="ak-button ak-share-button ak-small-share-button ak-facebook" href="https://www.facebook.com/sharer/sharer.php?u={% client_domain_url event.public_url %}&amp;action_id={{action.id}}&amp;akid={{akid}}" target="_blank">Post to Facebook</a>
+        </div>
+        <div style="float: right; width: 49%;">
+            <a class="ak-button ak-share-button ak-small-share-button ak-twitter" href="https://twitter.com/intent/tweet?text=Join%20me%20at%20an%20event%20to%20support%20@AbdulElSayed%20in%20Michigan.%20{% client_domain_url event.public_url %}%3Faction_id={{action.id}}%26akid={{akid}}" target="_blank">Share on Twitter</a>
+        </div>
+    </div>
 
             <p id="taf-confirmation" class="ak-confirmation">
                 Sent!  If you like, you can send more messages below.
@@ -97,13 +106,4 @@
     {% endblock %}
 
 {% endif %}
-
-    <div class="ak-margin-top-1 ak-clearfix">
-        <div style="float: left; width: 49%;">
-            <a class="ak-button ak-share-button ak-small-share-button ak-facebook" href="https://www.facebook.com/sharer/sharer.php?u={% client_domain_url event.public_url %}&amp;action_id={{action.id}}&amp;akid={{akid}}" target="_blank">Post to Facebook</a>
-        </div>
-        <div style="float: right; width: 49%;">
-            <a class="ak-button ak-share-button ak-small-share-button ak-twitter" href="https://twitter.com/intent/tweet?text=Join%20me%20at%20an%20event%20to%20support%20@AbdulElSayed%20in%20Michigan.%20{% client_domain_url event.public_url %}%3Faction_id={{action.id}}%26akid={{akid}}" target="_blank">Share on Twitter</a>
-        </div>
-    </div>
 
