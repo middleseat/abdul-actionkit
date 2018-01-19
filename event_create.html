@@ -5,14 +5,14 @@
 
 <form class="ak-form norecognize" name="act" method="POST" action="{% if update %}/update_action/{% else %}/act/{% endif %}" accept-charset="utf-8">
     <input type="hidden" name="page" value="{{ page.name }}">
+        {% if update %}
 
 <div class="ak-grid-row">
     <div class="ak-grid-col ak-grid-col-12-of-12">
-        {% if update %}
             <h2>Update Event Information</h2>
-        {% endif %}
     </div>
 </div>
+        {% endif %}
 
 <div class="ak-grid-row ak-grid-row-inverted">
 
