@@ -1,17 +1,57 @@
-Subject: Your "{{campaign_title}}" event has been approved!
+Subject: Your event was approved!
 
 {% load actionkit_tags %}
+
+<p>{% if user.first_name %}</p>
+<p>{{ user.first_name|default:"Friend"|title }}:</p>
+<p>{%endif%}</p>
+
 <!-- If a campaign requires event approval, this email gets sent out to event hosts when their event is approved -->
 
-<p>Congratulations! Your "{{campaign_title}}" event has been approved and is now open for signups!</p>
+<p>Great news! Your Livestream Organizing Meeting for Abdul event has been approved. Here are the next steps for making your event on February 18th a big success:
+</p>
 
-{% filter tag_links:'nr=1' %}
-<p>You can start sharing your event at <a href="{% client_domain_url event.public_url %}">{% client_domain_url event.public_url %}</a> with potential attendees. </p>
-{% endfilter %}
 
-<p>To use your event tools, visit <a href="https://{% client_ssl_domain %}{{ signup.url }}">https://{% client_ssl_domain %}{{ signup.url }}</a></p>
 
-<p>Thanks again!</p>
+<ol>
+  <li dir="ltr">
+    <p dir="ltr"><a style="font-weight:bold;text-decoration:underline;" href="https://docs.google.com/document/d/1j9F4IMuQyqsXIYQ9f2BATIcNKtJswXhfve2CHH2MP1U/edit?ts=5a60e365#"><strong>Read our event host guide.</strong></a> It goes through everything you need to know to host a successful and fun event.</p>
+
+     </li>
+  <li dir="ltr"><p><a style="font-weight:bold;text-decoration:underline;" href="https://docs.google.com/document/d/1eHvOUkXfwpeLZICezqtps4MPWpxI1q043e4fS_ijqHY/edit">Join us on a conference call. 
+    </a> We’ll explain more about the livestream and answer any questions you might have.</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr"><a style="font-weight:bold;text-decoration:underline;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1">Share your event!</a> Invite people to get involved on social media or via email with family and friends. We need as many people to attend these events as possible, so we can grow our resistance movement.</p>
+<p>
+Here’s a link to your event RSVP page that you can spread around:<br>
+http://{% client_domain %}{{ event.public_url }}?no_akid=1</p>
+<table style="width: 95%; background-color: #f3f3f3; font-weight: 400; font-size: 17px; line-height: 130%; text-align: center; font-family: Helvetica, Arial, sans-serif;" cellspacing="20" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-weight: 400; font-size: 17px; line-height: 130%; text-align: center; font-family: Helvetica, Arial, sans-serif;">
+<p style="font-weight: 400; font-size: 20px; line-height: 130%; text-align: center;"><a style="font-weight: bold; text-decoration: underline;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1&source=hostshare">{{ event.title }}</a><br /> {{ event.address1 }}, {{ event.city }}, {{ event.state }}<br />{{ event.starts_at_full }}</p>
+	<p style="text-align: center; margin-left: auto; margin-right: auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><strong><a style="font-family: sans-serif; font-size: 18px; background-color: #BE1E2D; border-bottom: 3px solid #910b18; width: 95%; max-width: 300px; margin: 12px auto; border-radius: 4px; text-align: center; color: white; text-decoration: none; padding: 12px 5px 11px; font-weight: bold; display: block; letter-spacing: 0px;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1&source=hostshare">Share your event &raquo;</a></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</li>
+</ol>
+<p dir="ltr">If you have any questions, comments or concerns, just email our team at info@abdulformichigan.com. If you need to edit your event, view and message attendees, or cancel your event, please use this magic link to login to your host tools (don’t share it!): https://{% client_ssl_domain %}{{ signup.url }}
+</p>
+<p>Thanks again for stepping up as a leader in the campaign, {{ user.first_name|default:"friend"|title }}.</p>
+<p dir="ltr">
+  <em>-The Abdul for Michigan Organizing Team</em></p>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
 
 <!-- Replacement for unsubscribe -->
-<p><small>You're receiving this message because you set up a "{{campaign_title}}" event.  If you don't want to receive further emails about this event, you can cancel the event using the host tools linked above.</small></p>
+<p><small>You're receiving this message because you set up an event with Abdul for Michigan. If you don't want to receive further emails about this event, you can cancel the event using the host tools linked above.</small></p>
