@@ -3266,3 +3266,15 @@ body.ak-pagetype-event_create .inline {
 body.ak-pagetype-event_create .clear {
     clear: both;
 }
+.ak-pagetype-event_create .ak-labels-before label.ak-event-category-checkbox-label {
+top: 0px;
+float:none;
+text-align:left;
+color:#333;
+}
+#event-categories-checkboxes { 
+width:65%;float:right;
+}
+#event-categories {
+clear:both;float:none;
+}
