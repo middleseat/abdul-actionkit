@@ -3272,6 +3272,7 @@ float:none;
 text-align:left;
 color:#333;
 	width:auto;
+	font-weight:normal;
 }
 #event-categories-checkboxes { 
 width:65%;float:right;
