@@ -85,11 +85,11 @@ $(window).on('load', function (){
                 {% if not update %}
                     {% if event.is_open_for_signup %}
                         {% if open_events|length|subtract:1 > 0 %}
-                            <a href="https://map.abdulformichigan.com/?zipcode={{args.zip}}&source={{source}}">Search for another event</a>.
+                            <a href="https://map.abdulformichigan.com/?zipcode={{args.zip}}&source={{args.source}}">Search for another event</a>.
                         {% endif %}
                     {% else %}
                         {% if open_events|length > 0 %}
-                            <a href="https://map.abdulformichigan.com/?zipcode={{args.zip}}&source={{source}}">Search for another event</a>.
+                            <a href="https://map.abdulformichigan.com/?zipcode={{args.zip}}&source={{args.source}}">Search for another event</a>.
                         {% endif %}
                     {% endif %}
                 </p>
