@@ -44,6 +44,8 @@
               <h3>Event categories</h3>
 				<div id="event-categories-checkboxes">
 					  {% with templateset.custom_fields.event_categories|load_json as categories_config %}
+					{% if not request.user.is_authenticated %}
+					
 					  {% for category in categories_config %}{% if not categories_config|nth:category|nth:"hidden"|default:0 %}
 					  <div class="ak-err-below">
 						<input id="id_action_event_category_{{ category }}"
@@ -58,6 +60,26 @@
 						</label>
 					  </div>
 					  {% endif %}{% endfor %}
+					
+					{% else %}
+					
+					{% for category in categories_config %}
+					  <div class="ak-err-below">
+						<input id="id_action_event_category_{{ category }}"
+							   class="checkbox" type="checkbox"
+							   name="action_event_category"
+							   value="{{ category }}"
+							   {% if event and event.custom_fields.category and event.custom_fields.category|force_list|contains:category %}checked{% endif %}
+						>
+						<label for="id_action_event_category_{{ category }}"
+							   class="ak-checkbox-label ak-event-category-checkbox-label">
+						  {{ categories_config|nth:category|nth:"label" }}
+						</label>
+					  </div>
+					{% endfor %}
+					
+					{% endif %}
+					
 					  {% endwith %}
 				</div>
             </div>
