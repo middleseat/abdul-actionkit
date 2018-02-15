@@ -56,7 +56,7 @@
 						>
 						<label for="id_action_event_category_{{ category }}"
 							   class="ak-checkbox-label ak-event-category-checkbox-label">
-						  {{ categories_config|nth:category|nth:"label" }}
+						  {{ categories_config|nth:category|nth:"label" }} - {{ request.GET.category }}
 						</label>
 					  </div>
 					  {% endif %}{% endfor %}
