@@ -52,7 +52,7 @@
 							   class="checkbox" type="checkbox"
 							   name="action_event_category"
 							   value="{{ category }}"
-							   {% if event and event.custom_fields.category and event.custom_fields.category|force_list|contains:category %}checked{% elif request.GET.category == category %}checked{% endif %}
+							   {% if event and event.custom_fields.category and event.custom_fields.category|force_list|contains:category %}checked{% else %}{% ifequal request.GET.category category %}checked{% endifequal %}{% endif %}
 						>
 						<label for="id_action_event_category_{{ category }}"
 							   class="ak-checkbox-label ak-event-category-checkbox-label">
