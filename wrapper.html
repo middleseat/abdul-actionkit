@@ -1,5 +1,21 @@
 {% load actionkit_tags %}
+
+{% if page.custom_fields.redirect_page %}
 <!DOCTYPE html>
+<html data-destination="{{page.custom_fields.redirect_page}}">
+  <head>
+    <noscript><meta id="redirect" http-equiv="refresh" content="0; url={{page.custom_fields.redirect_page}}"></noscript>
+	  <script>
+		  var destination = document.documentElement.getAttribute('data-destination');
+		  window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+  	  </script>
+  </head>
+
+  <body>
+      
+  </body>
+</html>
+{% else %}<!DOCTYPE html>
 <html lang="{{page.lang.iso_code|default:'en'}}"{% if page.lang.is_rtl %} dir="rtl"{% endif %}>
 <head>
     <meta charset="utf-8">
@@ -13,9 +29,9 @@
     {{ page.followup.share_description_tag }}
     {{ page.followup.share_image_tag }}
     {{ page.followup.share_url_tag }}
+	<meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="{% filter ak_text:"org_name" %}{% client_name %}{% endfilter %}">
     <meta property="og:type" content="article">
-    <meta name="twitter:card" value="summary">
     {% endblock %}
 
     {% block meta_additions %}{% endblock %}
@@ -319,4 +335,6 @@
 	/></noscript>
 	<!-- End Facebook Pixel Code -->
 </body>
+	
 </html>
+{% endif %}
