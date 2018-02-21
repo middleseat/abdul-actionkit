@@ -8,19 +8,12 @@ Subject: Your event was approved!
 
 <!-- If a campaign requires event approval, this email gets sent out to event hosts when their event is approved -->
 
-<p>Great news! Your Livestream Organizing Meeting for Abdul event has been approved. Here are the next steps for making your event on February 18th a big success:
+<p>Great news! Your event for Abdul has been approved. Here are the next steps for making your event a big success:
 </p>
 
 
 
-<ol>
-  <li dir="ltr">
-    <p dir="ltr"><a style="font-weight:bold;text-decoration:underline;" href="https://docs.google.com/document/d/1j9F4IMuQyqsXIYQ9f2BATIcNKtJswXhfve2CHH2MP1U/edit?ts=5a60e365#"><strong>Read our event host guide.</strong></a> It goes through everything you need to know to host a successful and fun event.</p>
-
-     </li>
-  <li dir="ltr"><p><a style="font-weight:bold;text-decoration:underline;" href="https://docs.google.com/document/d/1eHvOUkXfwpeLZICezqtps4MPWpxI1q043e4fS_ijqHY/edit">Join us on a conference call. 
-    </a> We’ll explain more about the livestream and answer any questions you might have.</p>
-  </li>
+<ul>
   <li dir="ltr">
     <p dir="ltr"><a style="font-weight:bold;text-decoration:underline;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1">Share your event!</a> Invite people to get involved on social media or via email with family and friends. We need as many people to attend these events as possible, so we can grow our resistance movement.</p>
 <p>
@@ -38,7 +31,7 @@ http://{% client_domain %}{{ event.public_url }}?no_akid=1</p>
 </table>
 
 </li>
-</ol>
+</ul>
 <p dir="ltr">If you have any questions, comments or concerns, just email our team at info@abdulformichigan.com. If you need to edit your event, view and message attendees, or cancel your event, please use this magic link to login to your host tools (don’t share it!): https://{% client_ssl_domain %}{{ signup.url }}
 </p>
 <p>Thanks again for stepping up as a leader in the campaign, {{ user.first_name|default:"friend"|title }}.</p>
