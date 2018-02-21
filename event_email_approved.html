@@ -13,7 +13,8 @@ Subject: Your event was approved!
 
 
 
-<ul>
+<ol>
+	<li><a href="https://docs.google.com/document/d/e/2PACX-1vR6yyGNmWxjLfFvcWLvcxJuwUHumV_zwe9fCRurC1_c2zHnNnlMqRkLie3cGImNSQ2I4hayq_AWxyhz/pub" style="font-weight:bold;text-decoration:underline;">Read our event host guide.</a> It goes through everything you need to know to host a successful and fun event.</li>
   <li dir="ltr">
     <p dir="ltr"><a style="font-weight:bold;text-decoration:underline;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1">Share your event!</a> Invite people to get involved on social media or via email with family and friends. We need as many people to attend these events as possible, so we can grow our resistance movement.</p>
 <p>
@@ -31,7 +32,7 @@ http://{% client_domain %}{{ event.public_url }}?no_akid=1</p>
 </table>
 
 </li>
-</ul>
+</ol>
 <p dir="ltr">If you have any questions, comments or concerns, just email our team at info@abdulformichigan.com. If you need to edit your event, view and message attendees, or cancel your event, please use this magic link to login to your host tools (don’t share it!): https://{% client_ssl_domain %}{{ signup.url }}
 </p>
 <p>Thanks again for stepping up as a leader in the campaign, {{ user.first_name|default:"friend"|title }}.</p>
