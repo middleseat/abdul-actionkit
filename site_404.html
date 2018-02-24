@@ -4,8 +4,7 @@
     Sorry, the URL you tried to load doesn't exist.  Check that it's typed
 correctly.
 </p> 
-	<p>{% if request.path|slice:"1:"|length == 2 %}
-	2 {%else%}nope{%endif%}
+	<p>{% if request.path|slice:"1:"|length == 2 %}{{request.path}}{%else%}{{request.path}}{%endif%}
 	</p>
 </body> 
 </html> 
