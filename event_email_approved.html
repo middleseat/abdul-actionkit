@@ -2,6 +2,54 @@ Subject: Your event was approved!
 
 {% load actionkit_tags %}
 
+{% if event.custom_fields.event_category|force_list|contains:"canvass" %}
+
+<p>{% if user.first_name %}</p>
+<p>Dear {{ user.first_name }},</p>
+<p>{% endif %}</p>
+<p>Thank you for stepping up to host a canvass! Knocking on doors and talking to voters about Abdul and this movement is the <strong>single most effective</strong> thing volunteers can do to make sure that we win in November.</p>
+<p>That’s because the overwhelming majority of voters in this race still haven’t learned about any of the candidates, and the most cutting edge political science research shows that voters are <em>most receptive</em> to learning about candidates when a volunteer comes to their door to have a <em>face-to-face conversation</em> about why one candidate deserves their support, and about the issues that matter.<sup>1</sup></p>
+<p>In other words, by taking the leadership and initiative to host your own canvass and invite other volunteers to join you knocking on doors, you’re laying the groundwork for victory on election day. So be proud of the work you’re doing, and get pumped for your upcoming event!</p>
+<p>First, here are the details for your event:</p>
+
+<table style="width: 95%; background-color: #f3f3f3; font-weight: 400; font-size: 17px; line-height: 130%; text-align: center; font-family: Helvetica, Arial, sans-serif;" cellspacing="20" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-weight: 400; font-size: 17px; line-height: 130%; text-align: center; font-family: Helvetica, Arial, sans-serif;">
+<p style="font-weight: 400; font-size: 20px; line-height: 130%; text-align: center;"><a style="font-weight: bold; text-decoration: underline;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1&source=hostshare">{{ event.title }}</a><br /> {{ event.address1 }}, {{ event.city }}, {{ event.state }}<br />{{ event.starts_at_full }}</p>
+	<p style="text-align: center; margin-left: auto; margin-right: auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><strong><a style="font-family: sans-serif; font-size: 18px; background-color: #e83d3e; border-bottom: 2px solid #d43738; width: 95%; max-width: 300px; margin: 12px auto; border-radius: 4px; text-align: center; color: white; text-decoration: none; padding: 12px 5px 11px; font-weight: bold; display: block; letter-spacing: 0px;" href="http://{% client_domain %}{{ event.public_url }}?no_akid=1&source=hostshare">Share your event &raquo;</a></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>To get ready to host your canvass launch, be sure to prepare the following things:</p>
+<ol>
+<li><a href="https://docs.google.com/document/d/1GLSnqGCy0IsOiwhbQ_HCAYEKC8vMR1T5IuErzMFOBW0/edit">Read through the canvassing guide before the event</a></li>
+<li>Tell your friends about your canvass! We will do our best to recruit for your event, but be sure to invite your friends and family to come with you to guarantee that folks will be there.</li>
+</ol>
+<p>On the day of your canvass, make sure that you:</p>
+<ol>
+<li>Dress for the weather! Don’t forget a warm jacket, a hat, and gloves if it’s cold out.</li>
+<li>Make sure your phone is fully charged! You’ll need it while you’re canvassing so that you can use MiniVAN to record your data.</li>
+</ol>
+<p>If you have any questions after reading the guide, feel free to email us at <a href="mailto:info@abdulformichigan.com">info@abdulformichigan.com</a>. If you need to edit your event, view and message attendees, or cancel your event, please use this magic link to login to your host tools (don’t share it!): https://{% client_ssl_domain %}{{ signup.url }}</p>
+	<p>Thank you so much for hosting a canvass!</p>
+<p>In solidarity,<br /> Lama, Nick, and Hannah<br /> Abdul for Michigan Organizing Team</p>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Replacement for unsubscribe -->
+<p><small>You're receiving this message because you set up an event with Abdul for Michigan. If you don't want to receive further emails about this event, you can cancel the event using the host tools linked above.</small></p>
+
+{% else %}
+
+
 <p>{% if user.first_name %}</p>
 <p>{{ user.first_name|default:"Friend"|title }}:</p>
 <p>{%endif%}</p>
@@ -49,3 +97,5 @@ http://{% client_domain %}{{ event.public_url }}?no_akid=1</p>
 
 <!-- Replacement for unsubscribe -->
 <p><small>You're receiving this message because you set up an event with Abdul for Michigan. If you don't want to receive further emails about this event, you can cancel the event using the host tools linked above.</small></p>
+
+{% endif %}
